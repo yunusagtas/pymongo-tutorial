@@ -12,6 +12,10 @@ With HTTP POST method.
 * mail
 * phone
 
+
+
+![Postman Image](postman.png)
+
 ## Insert data
 Send POST with **insert** parameter: Json text containing *name, surname, mail, phone* data.
 
