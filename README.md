@@ -6,7 +6,7 @@ This is flask and mongodb based simpe user information query api.
 With HTTP POST method.
 
 **List of POST Parameters**
-* id
+* _id
 * name
 * surname
 * mail
