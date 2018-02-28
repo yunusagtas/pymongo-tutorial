@@ -3,7 +3,10 @@ This is flask and mongodb based simpe user information query api.
 
 ## Query
 
-With HTTP POST method.
+With HTTP request method.
+
+**GET Parameter**
+* _id
 
 **List of POST Parameters**
 * _id
