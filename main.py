@@ -42,6 +42,8 @@ def on_post():
                     return "Empty parameter:%s" % insert_parameter
                 if insert_parameter == "mail" and not re.match(r"[^@]+@[^@]+\.[^@]+", data["mail"]):
                     return "Email is not valid"
+                if insert_parameter == "phone" and not data["phone"].isdigit():
+                    return "Phone is must be only numbers"
 
             inserted_id = adress_database.insert(data["name"], data["surname"], data["mail"], data["phone"])
             return str(inserted_id)
@@ -55,6 +57,8 @@ def on_post():
                 return "Invalid parameter:%s" % posted_parameter
             if value == "":
                 return "Empty parameter:%s" % posted_parameter
+            if posted_parameter == "phone" and not value.isdigit():
+                return "Phone is must be only numbers"
 
             if posted_parameter == "_id":
                 value = int(value)
